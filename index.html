@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Neeraj Raja Memory Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Lights and Sounds Memory Game</h1>
+
+    <p>
+      Welcome! Press the buttons in the same order to go to the next level!!
+    </p>
+    <p>You have 30 seconds per round and three strikes total!</p>
+
+    <button id="startBtn" onclick="startGame()">START</button>
+    <button id="stopBtn" class="hidden" onclick="stopGame()">STOP</button>
+    <div id="timer">
+      Time Remaining:<br />
+      <span id="time">00:00</span>
+    </div>
+
+    <div id="gameButtonArea">
+      <button
+        id="button1"
+        onclick="guess(1)"
+        onmousedown="startTone(1)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter1" class="buttonLetter"> C </span>
+      </button>
+
+      <button
+        id="button2"
+        onclick="guess(2)"
+        onmousedown="startTone(2)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter2" class="buttonLetter"> D </span>
+      </button>
+
+      <button
+        id="button3"
+        onclick="guess(3)"
+        onmousedown="startTone(3)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter3" class="buttonLetter"> E </span>
+      </button>
+
+      <button
+        id="button4"
+        onclick="guess(4)"
+        onmousedown="startTone(4)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter4" class="buttonLetter"> F </span>
+      </button>
+      
+      <br>
+
+      <button
+        id="button5"
+        onclick="guess(5)"
+        onmousedown="startTone(5)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter5" class="buttonLetter"> G </span>
+      </button>
+
+      <button
+        id="button6"
+        onclick="guess(6)"
+        onmousedown="startTone(6)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter6" class="buttonLetter"> A </span>
+      </button>
+
+      <button
+        id="button7"
+        onclick="guess(7)"
+        onmousedown="startTone(7)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter7" class="buttonLetter"> B </span>
+      </button>
+
+      <button
+        id="button8"
+        onclick="guess(8)"
+        onmousedown="startTone(8)"
+        onmouseup="stopTone()"
+      >
+        <span id = "letter8" class="buttonLetter"> C </span>
+      </button>
+    </div>
+    
+  </body>
+</html>
