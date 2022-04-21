@@ -33,12 +33,12 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app!
+- [*] Computer randomly selects one of the 12 major scales as the game buttons.
 
 ## Video Walkthrough (GIF)
   
-This GIF shows the player winning the game.
-<img src="http://g.recordit.co/XTmBCwpfqw.gif"><br>
+This GIF shows the player winning the game and starting another one. Notice the notes change.
+<img src="http://g.recordit.co/ClAMKHeRVJ.gif"><br>
 This GIF shows the player running out of time on a turn.
 <img src="http://g.recordit.co/BSvASrc0Qc.gif"><br>
 This GIF shows the player getting three strikes and losing.
