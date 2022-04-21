@@ -36,9 +36,11 @@ The following **additional** features are implemented:
 - [ ] List anything else that you can get done to improve the app!
 
 ## Video Walkthrough (GIF)
-
-If you recorded multiple GIFs for all the implemented features, you can add them here:
-<img src="http://g.recordit.co/PmAmnn2SJI.gif">
+  
+This GIF shows the player winning the first game, then losing the second game after getting three strikes. The notes change as well.
+<img src="http://g.recordit.co/PmAmnn2SJI.gif"><br>
+This GIF shows the player experimenting before starting the game and running out of time on a turn.
+<img src="http://g.recordit.co/zbrR01LMiu.gif">
 ![](gif2-link-here)
 ![](gif3-link-here)
 ![](gif4-link-here)
