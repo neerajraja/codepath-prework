@@ -88,7 +88,8 @@ This GIF shows the player getting three strikes and losing.
    sequence; however, I wanted it to start when the computer finished playing it and was unable to figure that out.
    
    - Add an option for the user to select which scale they want to play. Right now, the computer randomly selects a scale 
-   at the start of each game.
+   at the start of each game. I could also add different types of scales (minor scales, blues scales, pentatonic scales) which 
+   would add more depth and complexity.
    
    - Experiment with the noise output and try to make the computer play a song. I could change the length of time each note 
    plays by changing the sound functions provided. Then, I could create functions that played certain songs and link 
