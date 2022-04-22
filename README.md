@@ -4,7 +4,7 @@
 
 Submitted by: **Neeraj Raja**
 
-Time spent: **8** hours spent in total
+Time spent: **11** hours spent in total
 
 Link to project: (insert your link here, should start with https://glitch.com...)
 
@@ -47,16 +47,56 @@ This GIF shows the player getting three strikes and losing.
 ## Reflection Questions
 
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here.
-   [YOUR ANSWER HERE]
+   
+   - <a href="https://www.w3schools.com/">www.w3schools.com</a><br>
+   I used w3schools to help me with much of the JavaScript functionality in my game, such as setInterval and switch statements.
+   - <a href="https://pages.mtu.edu/~suits/notefreqs.html">https://pages.mtu.edu/~suits/notefreqs.html</a><br>
+   I used this website to find the frequencies for each musical note.
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words)
-   [YOUR ANSWER HERE]
+   
+   - The biggest challenge I encountered in creating this submission occurred when I was implementing the timer. 
+   I originally created a loop that called a setTimeout() every iteration to change the text on the screen every second. 
+   However, when clearTimeout() was called, the countdown continued. After many efforts at debugging, I fixed this by 
+   changing my repeated setTimeout() to a single setInterval() that got successfully cleared when I called 
+   clearInterval() once. I also had to research and use the innerHtml() function as well as the Date.now() function 
+   to continually update the time.
+   
+   - Another challenge I encountered was displaying the correct letter on the correct button at the correct time. 
+   I originally added the "hidden" class to the letters and, similar to the start and stop buttons, I removed the class
+   whenever the respective button was clicked. However, the buttons with text in them (unhidden letters) were no longer 
+   in-line with the buttons with no text in them (hidden letters). To solve this, instead of actively hiding and unhiding
+   the letters, I just set the font-color as well as the button backgrounds to white in my style.css page. This way, 
+   the letters became effectively "hidden" against the button backgrounds, but "revealed" when the buttons change color.
+   I used a case-switch block as well as innerHtml() to change the button letters each time the game started.
+   
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words)
-   [YOUR ANSWER HERE]
-
+   
+   - My favorite result of completing this project is that it showed me just how much more there is to learn. The reference sheets 
+   I used while researching JavaScript and CSS on w3schools were all very extensive and I would like to explore them more. 
+   A big question I have is: what other ways can web pages process user input other than buttons, and how can web developers
+   implement code to validate user input and throw errors. I also would like to explore the best methods of implementing time
+   into my web pages, especially since I struggled the most with implementing my timer. However, the biggest thing I now want 
+   to know is what the source code for popular websites looks like because I can better read and understand HTML, CSS, and JavaScript 
+   after completing this submission.
+   
+   
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words)
-   [YOUR ANSWER HERE]
+   
+   - Research and try to implement a better timer. Right now, it starts when the computer starts playing the clue 
+   sequence; however, I wanted it to start when the computer finished playing it and was unable to figure that out.
+   
+   - Add an option for the user to select which scale they want to play. Right now, the computer randomly selects a scale 
+   at the start of each game.
+   
+   - Experiment with the noise output and try to make the computer play a song. I could change the length of time each note 
+   plays by changing the sound functions provided. Then, I could create functions that played certain songs and link 
+   them to buttons with an onclick attribute.
+   
+   - Add a difficulty aspect where the user can select a game mode. The game could be made harder or easier several different ways, 
+   including changing the time between/for each clue, removing the colors resulting in an audio-only version, or changing the number 
+   of strikes.
 
 ## Interview Recording URL Link
 
@@ -64,7 +104,7 @@ This GIF shows the player getting three strikes and losing.
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright [Neeraj Raja]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
