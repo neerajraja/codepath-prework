@@ -15,18 +15,18 @@ var roundEndTime;
 var timeRemaining;
 var countdownInterval;
 const allScales = [
-  [261.63, 293.66, 329.63, 349.23, 392, 440, 493.88, 523.25], // C
-  [277.18, 311.13, 349.23, 369.99, 415.30, 466.16, 523.25, 554.37], // C#
-  [293.66, 329.63, 369.99, 392, 440, 493.88, 554.37, 587.33], // D
-  [311.13, 349.23, 392, 415.3, 466.16, 523.25, 587.33, 622.25], // Eb
-  [329.63, 369.99, 415.30, 440, 493.88, 554.37, 622.25, 659.25], // E
-  [349.23, 392, 440, 466.16, 523.25, 587.33, 659.25, 698.46], // F
-  [369.99, 415.3, 466.16, 493.88, 554.37, 622.25, 698.46, 739.99], // F#
-  [392, 440, 493.88, 523.25, 587.33, 659.25, 739.99, 783.99], // G
-  [415.3, 466.16, 523.25, 554.37, 622.25, 698.46, 783.99, 830.61], // G#
-  [220, 246.94, 277.18, 293.66, 329.63, 369.99, 415.3, 440], // A
-  [233.08, 261.63, 293.66, 311.13, 349.23, 392, 440, 466.16], // Bb
-  [246.94, 277.18, 311.13, 329.63, 369.99, 415.3, 466.16, 493.88]  // B
+  [261.63, 293.66, 329.63, 349.23, 392, 440, 493.88, 523.25], // C major scale (default)
+  [277.18, 311.13, 349.23, 369.99, 415.30, 466.16, 523.25, 554.37], // C# major scale
+  [293.66, 329.63, 369.99, 392, 440, 493.88, 554.37, 587.33], // D major scale
+  [311.13, 349.23, 392, 415.3, 466.16, 523.25, 587.33, 622.25], // Eb major scale
+  [329.63, 369.99, 415.30, 440, 493.88, 554.37, 622.25, 659.25], // E major scale
+  [349.23, 392, 440, 466.16, 523.25, 587.33, 659.25, 698.46], // F major scale
+  [369.99, 415.3, 466.16, 493.88, 554.37, 622.25, 698.46, 739.99], // F# major scale
+  [392, 440, 493.88, 523.25, 587.33, 659.25, 739.99, 783.99], // G major scale
+  [415.3, 466.16, 523.25, 554.37, 622.25, 698.46, 783.99, 830.61], // G# major scale
+  [220, 246.94, 277.18, 293.66, 329.63, 369.99, 415.3, 440], // A major scale
+  [233.08, 261.63, 293.66, 311.13, 349.23, 392, 440, 466.16], // Bb major scale
+  [246.94, 277.18, 311.13, 329.63, 369.99, 415.3, 466.16, 493.88]  // B major scale
 ]
 var freqMap = allScales[0];
 
@@ -85,7 +85,7 @@ function playClueSequence(isCounting) {
     delay += clueHoldTime;
     delay += cluePauseTime;
   }
-  if (!isCounting) {
+  if (!isCounting) {  // if this is the first time this clue sequence is being played
     clearInterval(countdownInterval);
     roundEndTime = Date.now() + 31000;
     countdownInterval = setInterval(updateTime, 1000);
@@ -97,8 +97,7 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-  if (btn != pattern[guessCounter]) {
-    // if the guess was wrong
+  if (btn != pattern[guessCounter]) { // if the guess was wrong
     numMistakes++;
     if (numMistakes == 3) {
       loseGame();
@@ -106,9 +105,8 @@ function guess(btn) {
     } else {
       playClueSequence(true); // Plays same clue sequence again
     }
-  } else {
-    // if the guess was correct
-    if (guessCounter < progress) {
+  } else { // if the guess was correct
+    if (guessCounter < progress) { // if user has not finished current clue sequence
       guessCounter++;
     } else {
       if (progress == pattern.length - 1) {
