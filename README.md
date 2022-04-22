@@ -6,7 +6,7 @@ Submitted by: **Neeraj Raja**
 
 Time spent: **11** hours spent in total
 
-Link to project: (insert your link here, should start with https://glitch.com...)
+Link to project: [https://glitch.com/edit/#!/field-erratic-carbon](https://glitch.com/edit/#!/field-erratic-carbon)
 
 ## Required Functionality
 
@@ -101,7 +101,7 @@ This GIF shows the player getting three strikes and losing.
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://www.loom.com/share/51303fc08ed64d5aa2d8be2e33247c46)
 
 ## License
 
